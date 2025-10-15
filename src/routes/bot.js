@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 8080
 
-app.get('/', (req, res) => {
+app.get('/bot', (req, res) => {
 
     let msg = `<?xml version="1.0" encoding="UTF-8"?>
     <Response>
