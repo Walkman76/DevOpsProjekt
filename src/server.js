@@ -9,12 +9,12 @@ console.log(`Node.js ${process.version}`)
 app.use(express.json())
 
 app.get('/', (req, res) => {
-    res.json({ msg: "Rahti2 node 0.2" })
+    res.json({ msg: "Rahti2 node 0.2.1" })
 })
 
 const botRouter = require('./routes/bot')
 app.use('/bot', botRouter)
 
 app.listen(PORT, () => {
-    console.log(`Running on ${process.env.URL_BOT_API}:${PORT}`)   
+    console.log(`Running on ${process.env.URL_BOT_API}:${PORT}`)
 })
