@@ -1,6 +1,7 @@
 const express = require('express')
-const app = express()
 require('dotenv').config()
+
+const app = express()
 const PORT = process.env.PORT || 8080
 
 console.log(`Node.js ${process.version}`)
@@ -14,12 +15,6 @@ app.get('/', (req, res) => {
 const botRouter = require('./routes/bot')
 app.use('/bot', botRouter)
 
-
 app.listen(PORT, () => {
-    try {
-        console.log(`Running on http://localhost:${PORT}`)
-    } catch (error) {
-        res.status(500).json({ message: error.message })
-    }
-    
+    console.log(`Running on ${process.env.URL_BOT_API}:${PORT}`)   
 })
