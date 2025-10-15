@@ -11,6 +11,9 @@ app.get('/', (req, res) => {
     res.json({ msg: "Rahti2 node 0.2" })
 })
 
+const botRouter = require('./routes/bot')
+app.use('/bot', botRouter)
+
 
 app.listen(PORT, () => {
     try {
